@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #021526;
+  --softBg: #232d3f;
+  --theme: #005b41;
+  --softTheme: #008170;
+}
+
+body {
+  background-color: var(--background);
+  color: white;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  background: linear-gradient(
+    159deg,
+    rgba(172, 225, 175, 1) 6%,
+    rgba(218, 221, 152, 1) 55%
+  );
+}
+.purpleGlow:hover {
+  box-shadow: 0px 0px 300px 0px rgba(169, 85, 247, 0.71);
+}
+.blueGlow:hover {
+  box-shadow: 0px 0px 300px 0px rgba(33, 116, 155, 0.71);
+}
+.greenGlow:hover {
+  box-shadow: 0px 0px 300px 0px rgba(0, 129, 112, 0.71);
+}
+.wordBox:hover > .wordpress {
+  fill: #21749b;
+}
+.hexagon {
+  height: 100px;
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
+}
+.blurCard {
+  background: rgba(35, 45, 63, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(35, 45, 63, 0.45);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.setCenter {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.counterBg {
+  background: url("/teamwork.jpg") center no-repeat fixed;
+  background-size: cover;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.226);
+}
+.imageSet {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.icon {
+  width: 25px;
+}
+.phoneSvg {
+  stroke: var(--softTheme);
+  position: absolute;
+  margin: auto;
+  z-index: -1;
+  text-align: center;
+}
+.sidebarBg {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: var(--softBg);
+}
+.button {
+  z-index: 1000;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 25px;
+  left: 38px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: fixed;
+  z-index: 2000;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
